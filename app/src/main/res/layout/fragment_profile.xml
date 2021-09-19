@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_decky_profile_back">
+
+    <ImageView
+        android:id="@+id/buttonDeckyNedir"
+        android:layout_width="@dimen/image_profile_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_margin_xxlarge"
+        android:src="@drawable/ic_decky_nedir"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewLogOut"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/view_margin_xxlarge"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_logout" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/activity_main_vertical_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/activity_main_vertical_margin" />
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="@dimen/image_profile_width"
+        android:layout_height="@dimen/image_profile_height"
+        android:layout_marginTop="@dimen/view_margin_exlarge"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/textViewProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textsize_xlarge"
+        android:text="@string/profileName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+
+    <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewProfile"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewProfile"
+        android:src="@drawable/ic_pen" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_margin_xxlargesy"
+        android:layout_marginTop="@dimen/view_margin_xxlarge"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayoutCrown"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile">
+
+        <ImageView
+            android:id="@+id/imageViewBattle"
+            android:layout_width="@dimen/image_badge_width"
+            android:layout_height="@dimen/image_badge_height"
+            android:src="@drawable/ic_battlebig" />
+
+        <TextView
+            android:id="@+id/textViewBattleScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="12"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize_large" />
+
+        <TextView
+            android:id="@+id/textViewBattle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Battle"
+            android:textColor="@color/pink" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCrown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_margin_xxlarge"
+        android:layout_marginRight="@dimen/view_margin_xxlargesy"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintLeft_toRightOf="@+id/linearLayoutBadge"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile">
+
+        <ImageView
+            android:id="@+id/imageViewCrown"
+            android:layout_width="@dimen/image_badge_width"
+            android:layout_height="@dimen/image_badge_height"
+            android:src="@drawable/ic_successbig" />
+
+        <TextView
+            android:id="@+id/textViewBasariScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="9"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize_large" />
+
+        <TextView
+            android:id="@+id/textViewBasari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Başarı"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewBiziTakipEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bizitakip"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutSocialLogin"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutBadge" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSocialLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_margin_xxxlarge"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart">
+
+        <ImageView
+            android:id="@+id/imageViewTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_twitter" />
+
+        <ImageView
+            android:id="@+id/imageViewLinkedn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_linkedin" />
+
+        <ImageView
+            android:id="@+id/imageViewInstagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_instagram" />
+
+        <ImageView
+            android:id="@+id/imageViewFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_facebooklogin" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

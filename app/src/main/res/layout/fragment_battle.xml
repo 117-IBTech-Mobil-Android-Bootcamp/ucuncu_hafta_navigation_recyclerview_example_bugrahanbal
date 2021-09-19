@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_battle_background"
+    tools:context=".ui.FragmentBattle">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/activity_main_horizontal_margin" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/activity_main_horizontal_margin" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/cardView_height"
+        android:layout_marginTop="@dimen/view_margin_xxlargesy"
+        app:cardCornerRadius="@dimen/cardView_large"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_battle_couple">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_battle_crown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_battle_crown">
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_margin_default"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battleScore"
+                    android:textSize="@dimen/textsize_small2">
+                </EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battlePuan"
+                    android:paddingLeft="@dimen/textsize_vsmall"
+                    android:textSize="@dimen/textsize_small">
+                </TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="                                              ">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_battle_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/view_margin_default"
+                android:src="@drawable/ic_battle_star">
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/view_margin_small"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/level"
+                    android:textSize="@dimen/textsize_small2">
+                </EditText>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/view_margin_small"
+                    android:background="@drawable/ic_progress_bar"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_battle_couple"
+        android:layout_width="@dimen/image_couple_width"
+        android:layout_height="@dimen/image_couple_height"
+        android:layout_marginBottom="@dimen/view_margin_extralarge"
+        android:src="@drawable/ic_battle_couple"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        android:layout_marginTop="@dimen/view_margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_battle_single"
+        app:layout_constraintStart_toStartOf="@id/guide_start">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_battle_single"
+        android:layout_width="@dimen/image_single_width"
+        android:layout_height="@dimen/image_single_height"
+        android:layout_marginBottom="@dimen/view_margin_xxxlarge"
+        android:src="@drawable/ic_battle_single"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_start">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_battle_couple"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/ic_battle_button_couple"
+        android:gravity="center"
+        android:text="@string/simdi_oyna"
+        android:layout_marginTop="@dimen/view_margin_small"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCiftOyuncu">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_battle_single"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/view_margin_xxxlarge"
+        android:background="@drawable/ic_battle_button"
+        android:gravity="center"
+        android:text="@string/simdi_oyna"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_end">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCiftOyuncu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_margin_large"
+        android:layout_marginRight="@dimen/view_margin_large"
+        android:fontFamily="@font/robotoblack"
+        android:text="@string/iki_oyuncu"
+        android:textSize="@dimen/textsize_large"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/view_margin_small"
+        app:layout_constraintBottom_toTopOf="@+id/button_battle_couple"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_battle_couple" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTekOyuncu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/view_margin_large"
+        android:layout_marginBottom="@dimen/view_margin_small"
+        android:fontFamily="@font/robotoblack"
+        android:text="@string/tek_oyuncu"
+        android:textSize="@dimen/textsize_large"
+        app:layout_constraintBottom_toTopOf="@+id/button_battle_single"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        tools:layout_editor_absoluteY="468dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

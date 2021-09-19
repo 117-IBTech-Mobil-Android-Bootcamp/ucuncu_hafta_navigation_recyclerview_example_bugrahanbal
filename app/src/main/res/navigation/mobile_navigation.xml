@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/navigation_battle"
+        android:name="com.balbugrahan.week3.ui.FragmentBattle"
+        android:label="@string/title_battle"
+        tools:layout="@layout/fragment_battle" >
+        <action
+            android:id="@+id/action_navigation_battle_to_navigation_decklerim"
+            app:destination="@id/navigation_decklerim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_decklerim"
+        android:name="com.balbugrahan.week3.ui.FragmentDecklerim"
+        android:label="@string/title_decklerim"
+        tools:layout="@layout/fragment_decklerim" >
+        <action
+            android:id="@+id/action_navigation_decklerim_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.balbugrahan.week3.ui.FragmentProfile"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_fragmentProfileDetails"
+            app:destination="@id/fragmentProfileDetails"
+            app:enterAnim="@anim/enter_from_down"
+            app:exitAnim="@anim/exit_to_down"/>
+            <!--app:popEnterAnim="@anim/enter_from_up"
+            app:popExitAnim="@anim/exit_to_up"-->
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.balbugrahan.week3.ui.FragmentSplash"
+        android:label="FragmentSplash" >
+        <action
+            android:id="@+id/action_fragmentSplash_to_navigation_battle"
+            app:destination="@id/navigation_battle"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfileDetails"
+        android:name="com.balbugrahan.week3.ui.FragmentProfileDetails"
+        android:label="fragment_profile_details"
+        tools:layout="@layout/fragment_profile_details" >
+        <action
+            android:id="@+id/action_fragmentProfileDetails_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@anim/enter_from_up"
+            app:exitAnim="@anim/exit_to_up"/>
+    </fragment>
+</navigation>

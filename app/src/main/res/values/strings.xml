@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DeckSampleCloneWeek3</string>
+
+
+    <string name="simdi_oyna">Şimdi Oyna    > </string>
+    <string name="iki_oyuncu">İki Oyuncu</string>
+    <string name="tek_oyuncu">Tek Oyuncu</string>
+    <string name="level">Level 15</string>
+    <string name="emptytitle">Empty State Title</string>
+    <string name="emptysubword">empty state sub word</string>
+    <string name="bizitakip">Bizi Takip Edin</string>
+    <string name="profileName">John Doe</string>
+
+
+    <string name="battlePuan">PUAN</string>
+    <string name="battleScore">700</string>
+
+    <!--Navigation-->
+    <string name="title_battle">Battle</string>
+    <string name="title_decklerim">Decklerim</string>
+    <string name="title_profile">Profile</string>
+    <string name="back"><![CDATA[< Back]]></string>
+
+
+</resources>
